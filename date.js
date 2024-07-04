@@ -6,5 +6,4 @@ var month = ("0" + (now.getMonth() + 1)).slice(-2);
 
 var today = now.getFullYear() + "-" + (month) + "-" + (day);
 
-document.getElementById("startDate").value=(today);
-document.getElementById("offDate").value=(today);
+document.getElementById("date").value=(today);

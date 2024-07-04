@@ -8,14 +8,14 @@
   <title>Cloud Form</title>
 
 </head>
-
 <body>
     
 
   <h3>Salary Record System</h3>
 
   <div>
-    <form id="clearForm">
+    <form id="clearForm" onsubmit="checkForm()">
+      <!-- 
       <label for="startTime1">start Time</label>
       <input type="text" id="startTime1" name="firstname1" placeholder="Your name..">
 
@@ -24,14 +24,13 @@
 
       <label for="SalaryPerHour1">SalaryPerHour</label>
       <input type="text" id="SalaryPerHour1" name="SalaryPerHour1" placeholder="Salary Per Hour...">
-
-
-      <label for="startTime">返工時間：</label>
-      <input type="date" id="startDate" name="startDate"/>
-      <input id="clockStartTime" type="time" name="clockStartTime" />
+      -->
+      <label for="date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日期：</label>
+      <input type="date" id="date" name="Date"/>
       <br>
-      <label for="offTime">收工時間：</label>
-      <input type="date" id="offDate" name="offDate"/>
+      <label for="startTime">返工時間：</label>
+      <input id="clockStartTime" type="time" name="clockStartTime" />
+      <label>-</label>
       <input id="clockOffTime" type="time" name="clockOffTime" />
       <br>
       <label for="SalaryPerHour">雞碎時薪：</label>
@@ -41,6 +40,12 @@
 
     </form>
     <button onclick="showAllRecord()">Show All Record</button>
+    <table id="all_data" border="1" width="100%">
+        <tr>
+          <th>日期</th><th>返工</th><th>收工</th><th>時數</th><th>時薪</th><th>當天人工</th></tr>
+        </tr>
+    
+    </table>
   </div>
   <div id="showdata">
 
