@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+  <title>Salary Record System v1.5</title>
+
+</head>
+<body>
+    
+
+  <h3>Salary Record System v1.5</h3>
+  <h1>Report</h1>
+  <a href="index.html">Back</a>
+  <div> 
+
+
+    <label>選擇月份：</label><input id='calendar' />
+    <button onclick="showReport()">Show Report</button>
+    <table id="all_data_report" border="1" width="100%">
+        <tr>
+          <th>日期</th><th>返工</th><th>收工</th><th>時數</th><th>時薪</th><th>當天人工</th></tr>
+        </tr>
+    
+    </table>
+  </div>
+  <div id="showdata">
+
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="db.js"></script>
+  <script src="date.js"></script>
+  <script src="https://jsuites.net/v4/jsuites.js"></script>
+  <script>
+    // Enable the year and month picker
+    jSuites.calendar(document.getElementById('calendar'), {
+        type: 'year-month-picker',
+        format: 'YYYY-MM',
+    });
+    </script>
+</body>
+
+</html>
